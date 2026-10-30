@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== Background layers ===== -->
+  <div class="bg-gradient"></div>
+  <div id="stars" class="layer"></div>
+  <div id="floaters" class="layer"></div>
+  <canvas id="confetti"></canvas>
+
+  <!-- ===== Music toggle ===== -->
+  <button id="musicBtn" class="music-btn" aria-label="Toggle music" title="Music">🔇</button>
+
+  <!-- ===== Progress dots ===== -->
+  <nav class="progress" id="progress"></nav>
+
+  <main>
+    <!-- 1. Welcome -->
+    <section class="screen active" id="screen-welcome">
+      <div class="glass card-hero">
+        <div class="emoji-bounce">🎂</div>
+        <h1 class="title shimmer">Today Is Your<br />Special Day! 🎂</h1>
+        <p class="subtitle">Someone made a little magic, just for you…</p>
+        <button class="glow-btn" data-next="screen-wishes">Click Here for a Surprise ❤️</button>
+      </div>
+    </section>
+
+    <!-- 2. Wishes -->
+    <section class="screen" id="screen-wishes">
+      <div class="glass card-hero">
+        <h2 class="script-title">Happy Birthday</h2>
+        <p class="anim-words" id="wishText">
+          On this beautiful day, the whole universe paused for a moment to celebrate you —
+          your laugh, your kindness, your light. Wishing you a year as wonderful as you are.
+        </p>
+        <button class="glow-btn" data-next="screen-message">Read My Special Message 💌</button>
+      </div>
+    </section>
+
+    <!-- 3. Special message (typed) -->
+    <section class="screen" id="screen-message">
+      <div class="glass card-letter">
+        <div class="seal">💌</div>
+        <h2 class="script-title small">A Letter For You</h2>
+        <p class="typed" id="typed"></p>
+        <div class="row">
+          <button class="ghost-btn" id="skipTyping">Skip ⏩</button>
+          <button class="glow-btn hidden" id="afterLetter" data-next="screen-values">One More Surprise ✨</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Values (last screen) -->
+    <section class="screen" id="screen-values">
+      <h2 class="script-title">I Wish You…</h2>
+      <p class="hint">Tap a card to unlock its blessing</p>
+      <div class="values-grid" id="valuesGrid"></div>
+      <div class="final-msg glass">
+        <h2 class="title shimmer">Happy Birthday! 🎂❤️</h2>
+        <p>May your life always be filled with love, laughter, happiness, and endless beautiful moments!</p>
+        <button class="glow-btn" id="restart">Celebrate Again 🎉</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
